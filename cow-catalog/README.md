@@ -2,7 +2,16 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
 
-## Development server
+
+## Development local server
+
+First clone the repo
+
+Then run the below command to install all the packages:
+
+```bash
+npm install
+```
 
 To start a local development server, run:
 
