@@ -1,0 +1,20 @@
+@use '../../../../styles//abstracts/mixins' as *;
+
+.cowsListing_wraper {
+
+    .heading {
+        @include justfy-content(space-between);
+        @include align-items(center);
+    }
+
+    .filter_wraper {
+        @include justfy-content(flex-end);
+        margin-bottom: 20px;
+    }
+
+    .status_filter {
+        margin: 0 10px;
+    }
+
+}
+

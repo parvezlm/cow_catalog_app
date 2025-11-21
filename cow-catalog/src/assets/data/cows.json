@@ -1,0 +1,46 @@
+[
+  { 
+    "id": 1,
+    "earTag": "CT001",
+    "sex": "Female",
+    "pen": "A1",
+    "status": "Active",
+    "weight": 450,
+    "lastEventDate": "2025-11-10T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "earTag": "CT002",
+    "sex": "Male",
+    "pen": "A2",
+    "status": "In Treatment",
+    "weight": 500,
+    "lastEventDate": "2025-11-15T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "earTag": "CT003",
+    "sex": "Female",
+    "pen": "B1",
+    "status": "Active",
+    "weight": 430,
+    "lastEventDate": "2025-11-18T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "earTag": "CT004",
+    "sex": "Male",
+    "pen": "B2",
+    "status": "Deceased",
+    "lastEventDate": "2025-10-20T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "earTag": "CT005",
+    "sex": "Female",
+    "pen": "C1",
+    "status": "Active",
+    "weight": 470,
+    "lastEventDate": "2025-11-19T00:00:00.000Z"
+  }
+]

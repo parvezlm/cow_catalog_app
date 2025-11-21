@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+.ml-1 {
+  margin-left: 10px;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
+.mr-2 {
+  margin-right: 15px;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.error {
+  color: $error-color;
+}
+
+.no-border-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.heading {
+  padding-bottom: 15px;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 35px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}
+
+.form-control {
+  background-color: $white-color !important;
+  border: 1px solid $border-color !important;
+  width: 100%;
+  color: $primary-color !important;
+}
+
+.back-btn {
+  color: $primary-color !important;
+  text-decoration: none !important;
+}
+
+.status-dropdown {
+  .p-select-label {
+    color: $primary-color !important;
+  }
+}

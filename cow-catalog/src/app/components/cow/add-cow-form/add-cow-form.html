@@ -1,0 +1,48 @@
+<section class="form_wraper">
+    <h2 class="heading">
+        <button type="button" class="no-border-btn back-btn mr-2" routerLink="/" tooltip="Back">
+            <i class="pi pi-arrow-left"></i>
+        </button>
+        Add Cow
+    </h2>
+    <form [formGroup]="cowForm" (ngSubmit)="submit()">
+        <div class="form-group">
+            <label>Ear tag</label>
+            <input type="text" pInputText class="form-control" formControlName="earTag" placeholder="Ear Tag" fluid
+                pSize="large" />
+            <app-form-error [control]="cowForm.get('earTag')" label="Ear Tag"></app-form-error>
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="d-flex">
+                <div class="mr-1">
+                    <p-radiobutton inputId="male" name="gender" formControlName="sex" value="Male" class="mr-1" />
+                    <label for="male" class="m-0">Male</label>
+                </div>
+                <div class="">
+                    <p-radiobutton inputId="female" formControlName="sex" name="gender" value="Female" class="mr-1" />
+                    <label for="female" class="m-0">Female</label>
+                </div>
+            </div>
+            <app-form-error [control]="cowForm.get('sex')" label="Gender"></app-form-error>
+        </div>
+        <div class="form-group">
+            <label>Pen</label>
+            <input type="text" pInputText class="form-control" formControlName="pen" placeholder="Pen" fluid
+                pSize="large" />
+            <app-form-error [control]="cowForm.get('pen')" label="Pen"></app-form-error>
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            <p-select [options]="status" class="form-control status-dropdown" formControlName="status" placeholder="Select a City" fluid
+                size="large" />
+            <app-form-error [control]="cowForm.get('status')" label="Status"></app-form-error>
+        </div>
+        <div class="form-group">
+            <label>Weight (in Kg)</label>
+            <input type="number" pInputText class="form-control" formControlName="weight" placeholder="weight" fluid
+                pSize="large" />
+        </div>
+        <button type="submit" pButton>Submit</button>
+    </form>
+</section>

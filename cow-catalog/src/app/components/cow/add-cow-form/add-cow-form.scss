@@ -1,0 +1,13 @@
+@use '../../../../styles/abstracts/variables' as *;
+
+.form_wraper {
+    form {
+        max-width: 540px;
+        padding: 40px 30px;
+        box-shadow: $box-shadow;
+    } 
+}
+
+.p-select-label {
+    color: #000!important;
+}

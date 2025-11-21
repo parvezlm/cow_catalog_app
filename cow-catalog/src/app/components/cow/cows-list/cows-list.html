@@ -1,0 +1,55 @@
+<section class="cowsListing_wraper">
+    <h2 class="heading d-flex">
+        Cows ({{ cows.length }})
+        <p-button label="Add Cow" [raised]="true" routerLink="/add-cow">
+            <i class="pi pi-plus"></i>
+        </p-button>
+    </h2>
+    <div class="card">
+       <div class="filter_wraper d-flex">
+            <input
+                pInputText
+                type="text"
+                placeholder="Search by Ear Tag..."
+                (input)="cowTable.filter($event.target.value, 'earTag', 'contains')" 
+                class="mr-1"
+            />
+            
+            <p-select [options]="pen" optionValue="code" class="mr-1" optionLabel="name" placeholder="Filter by Pen" (onChange)="cowTable.filter($event.value, 'pen', 'equals')"/>
+            <p-select [options]="status" optionValue="code" class="mr-1" optionLabel="name" placeholder="Filter by Status" (onChange)="cowTable.filter($event.value, 'status', 'equals')"/>
+            <button pButton label="Reset Filters" (click)="resetFilters(cowTable)"></button>
+       </div>
+
+        <p-table #cowTable [value]="cows" dataKey="id" [filterDelay]="0">
+            <ng-template #header>
+                <tr>
+                    <th>Ear Tag</th>
+                    <th>Gender</th>
+                    <th>Pen</th>
+                    <th>Status</th>
+                    <th>Last Event Date</th>
+                    <th>Action</th>
+                </tr>
+            </ng-template>
+            <ng-template #body let-cow>
+                <tr>
+                    <td>{{ cow.earTag | uppercase }}</td>
+                    <td>{{ cow.sex}}</td>
+                    <td>{{ cow.pen}}</td>
+                    <td>{{ cow.status}}</td>
+                    <td>{{ cow.lastEventDate | date: 'dd/MM/yyyy'}}</td>
+                    <td>
+                        <button type="button" [routerLink]="['/cow-details', cow.id]" class="no-border-btn" title="View cow details">
+                            <i class="pi pi-eye" style="font-size: 1rem"></i>
+                        </button>
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template #emptymessage>
+                <tr>
+                    <td colspan="6">No cows found.</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</section>
